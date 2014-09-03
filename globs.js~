@@ -1,0 +1,26 @@
+var siteloc = "http:localhost";
+var scriptloc = "/activity/"
+
+function calculate()
+{
+  $.ajax({
+      url: siteloc + scriptloc + "activity.py",
+      data: {number:$("#number").val(),
+             raiseTo:$("#raiseTo").val()},
+      dataType: 'json',
+      success: function (res) {
+                  console.log(res);
+                  if(res[0][0] != "None")
+                  {
+			answer = "<div>";
+			for(i=0; i < res.length; i++){
+				row = res[i];
+				for(j=0; j<row.length; j++){
+					answer += "<p>Answer:" + row[i] + "</p>";
+			}
+			answer += "</div>";
+					  $("#target").html(answer); 
+				  } // end if
+              }
+    });
+}

@@ -1,0 +1,23 @@
+<html>
+   <head>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+		<script src="javascript/jquery.js"></script>
+        <script src="javascript/bootstrap.min.js"></script>
+		<script src="javascript/globs.js"></script>
+        <script src="javascript/jqinit.js"></script>
+   </head>
+   <body>
+       <form>
+		number: <input type="int" name="number"><br>
+		raiseTo: <input type="string" name="raiseTo">
+       </form>
+	   <div id="target">
+       </div>
+	   <button    
+	            class="btn btn-success btn-mini"
+	            onclick="calculate();">
+				Calculate...
+	   </button>
+   </body>
+</html>
