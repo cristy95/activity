@@ -7,15 +7,15 @@ def index(req, number, raiseTo):
     raiseTo = cgi.escape(raiseTo)
     a = int(number)
     e = int(raiseTo)
-    if raiseTo == 2:
-	square = make_exponentiater(e)
-	result = square(a)
+    ##if raiseTo == 2:
+    expo = make_exponentiater(e)
+    result = expo(a)
         ##print result
-    else:
-	cube = make_exponentiater(e)
-	result = cube(a)
+    ##else:
+	##cube = make_exponentiater(e)
+	##result = cube(a)
         ##print result
-	return json.dumps(result)
+    return json.dumps(result)
 
 def make_exponentiater(raiseTo):
     return lambda(x): pow(x, raiseTo) 

@@ -3,17 +3,17 @@ import json
 
 
 def index(req, number, raiseTo):
-    cgi.escape(number)
-    cgi.escape(raiseTo)
+    number = cgi.escape(number)
+    raiseTo = cgi.escape(raiseTo)
     a = int(number)
     e = int(raiseTo)
-    if raiseTo == 2:
-	square = make_exponentiater(e)
-	result = square(a)
+    ##if raiseTo == 2:
+    expo = make_exponentiater(e)
+    result = expo(a)
         ##print result
-    else:
-	cube = make_exponentiater(e)
-	result = cube(a)
+    ##else:
+	##cube = make_exponentiater(e)
+	##result = cube(a)
         ##print result
 	return json.dumps(result)
 
