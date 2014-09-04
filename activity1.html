@@ -8,16 +8,27 @@
         <script src="jqinit.js"></script>
    </head>
    <body>
-       <form>
-		number: <input type="int" name="number"><br>
-		raiseTo: <input type="string" name="raiseTo">
-       </form>
+       <table>
+			   <thead>
+			     <tr>
+				    <th>Number</th>
+					<th>RaiseTo</th>
+				 </tr>
+			   </thead>
+			   <tbody>
+			     <tr>
+					<td> <input type="int" id="number"> </td>
+					<td> <input type="int" id="raiseTo"> </td>
+			     </tr>
+			   </tbody>
+		</table>
 	   <div id="target">
        </div>
 	   <button    
 	            class="btn btn-success btn-mini"
 	            onclick="calculate();">
-				Calculate...
+				Load..
 	   </button>
+<hr>
    </body>
 </html>
